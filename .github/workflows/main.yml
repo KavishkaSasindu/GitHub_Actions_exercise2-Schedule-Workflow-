@@ -1,12 +1,11 @@
 on:
-  schedule:
-    - cron: '*/2 * * * *'
+  push:
+    branches:
+      - main
 
 jobs:
-  test_schedule:
+  Hello_World:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo Hello World with Data
+      - name: Echo Hello World when push with date
         run: echo "Hello World $(date)"
-      - name: Every time
-        run: echo "This step will always run"
