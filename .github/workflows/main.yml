@@ -1,0 +1,12 @@
+name: Hello World on shedule cron job
+
+on:
+  schedule:
+    - cron: "*/1 * * * *"
+
+jobs:
+  hello_world:
+    runs_on: ubunru-latest
+    steps:
+      - name: Echo Hello World with time
+        run: echo "Hello World at $(date)"
