@@ -1,12 +1,12 @@
-name: Hello World on shedule cron job
-
 on:
   schedule:
-    - cron: "*/1 * * * *"
+    - cron: '*/2 * * * *'
 
 jobs:
-  hello_world:
-    runs_on: ubunru-latest
+  test_schedule:
+    runs-on: ubuntu-latest
     steps:
-      - name: Echo Hello World with time
-        run: echo "Hello World at $(date)"
+      - name: Echo Hello World with Data
+        run: echo "Hello World $(date)"
+      - name: Every time
+        run: echo "This step will always run"
